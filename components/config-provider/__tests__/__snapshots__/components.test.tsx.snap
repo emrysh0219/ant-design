@@ -42165,8 +42165,6 @@ exports[`ConfigProvider components Upload configProvider 1`] = `
   >
     <span
       class="config-upload"
-      role="button"
-      tabindex="0"
     >
       <input
         accept=""
@@ -42263,7 +42261,6 @@ exports[`ConfigProvider components Upload configProvider componentDisabled 1`] =
   >
     <span
       class="config-upload config-upload-disabled"
-      role="button"
     >
       <input
         accept=""
@@ -42330,8 +42327,6 @@ exports[`ConfigProvider components Upload configProvider componentSize large 1`]
   >
     <span
       class="config-upload"
-      role="button"
-      tabindex="0"
     >
       <input
         accept=""
@@ -42428,8 +42423,6 @@ exports[`ConfigProvider components Upload configProvider componentSize middle 1`
   >
     <span
       class="config-upload"
-      role="button"
-      tabindex="0"
     >
       <input
         accept=""
@@ -42526,8 +42519,6 @@ exports[`ConfigProvider components Upload configProvider componentSize small 1`]
   >
     <span
       class="config-upload"
-      role="button"
-      tabindex="0"
     >
       <input
         accept=""
@@ -42624,8 +42615,6 @@ exports[`ConfigProvider components Upload normal 1`] = `
   >
     <span
       class="ant-upload"
-      role="button"
-      tabindex="0"
     >
       <input
         accept=""
@@ -42722,8 +42711,6 @@ exports[`ConfigProvider components Upload prefixCls 1`] = `
   >
     <span
       class="prefix-Upload"
-      role="button"
-      tabindex="0"
     >
       <input
         accept=""
