@@ -3,6 +3,7 @@ import { Col, Skeleton, Space, Typography } from 'antd';
 import { createStyles } from 'antd-style';
 import classNames from 'classnames';
 import { FormattedMessage, useRouteMeta } from 'dumi';
+import { useInView } from 'react-intersection-observer';
 
 import useLayoutState from '../../../hooks/useLayoutState';
 import useLocation from '../../../hooks/useLocation';
@@ -59,6 +60,10 @@ const Content: React.FC<React.PropsWithChildren> = ({ children }) => {
 
   const isRTL = direction === 'rtl';
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <DemoContext.Provider value={contextValue}>
       <Col xxl={20} xl={19} lg={18} md={18} sm={24} xs={24}>
@@ -100,9 +105,13 @@ const Content: React.FC<React.PropsWithChildren> = ({ children }) => {
               juejinLink={meta.frontmatter.juejin_url}
             />
           </Suspense>
-          <Suspense fallback={<Skeleton.Input active size="small" />}>
-            <Contributors filename={meta.frontmatter.filename} />
-          </Suspense>
+          <div ref={ref}>
+            {inView && (
+              <Suspense fallback={<Skeleton.Input active size="small" />}>
+                <Contributors filename={meta.frontmatter.filename} />
+              </Suspense>
+            )}
+          </div>
         </article>
         <Suspense fallback={<Skeleton.Input active size="small" />}>
           <PrevAndNext rtl={isRTL} />
