@@ -13,10 +13,10 @@ const cancel = (e: React.MouseEvent<HTMLElement>) => {
 
 const App: React.FC = () => (
   <Popconfirm
-    title="Delete the task"
-    description="Are you sure to delete this task?"
-    onConfirm={confirm}
-    onCancel={cancel}
+    title="删除该客户"
+    description="您确定要删除该客户吗?"
+    onConfirm={确认}
+    onCancel={取消}
     okText="Yes"
     cancelText="No"
   >
